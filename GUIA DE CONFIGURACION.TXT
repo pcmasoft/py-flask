@@ -1,0 +1,17 @@
+#establecer el servidor
+ServerName 127.0.0.1:80
+Listen 80
+
+# lugar de donde cargar la dll de python
+LoadFile "C:/Python312/python312.dll"
+# donde se encuentra el modulo de mod_wsgi
+LoadModule wsgi_module "E:/PROGRAMACION/MY-ROADMAP-TEC/PYTHON/py-scripts/py-flask/venv/Lib/site-packages/mod_wsgi/server/mod_wsgi.cp312-win_amd64.pyd"
+# ruta del la venv
+WSGIPythonHome "E:/PROGRAMACION/MY-ROADMAP-TEC/PYTHON/py-scripts/py-flask/venv"
+
+#incluir la configuraciones y modulo de flask, este va al final del archivo
+include conf/app.conf
+
+#se debe ejecutar el siguiente comando para generar el pycache
+#el nombre de la app sin el .py
+flask --app My_App_Name run
