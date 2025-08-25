@@ -1,11 +1,11 @@
-import flask
+import flask as fl
 from flask import request, jsonify
 
-app = flask.Flask(__name__)
+app = fl.Flask(__name__)
 
 @app.route('/', methods = ['GET'])
 def home():
-    return "<h1>  Funciona todo ok! </h1>"
+    return "<h1>  Funciona todo ok y en español! </h1>"
 
 @app.route('/get', methods = ['GET', 'POST'])
 def get():
@@ -29,6 +29,7 @@ def get():
         return jsonify({'res' : 'This is Correct'})
     return jsonify({'res' : 'This is NOT Correct'})
 
-if(__name__ == '__main__'):
+#if(__name__ == '__main__'):
     #app.run(debug=True)
-    app.run(host = '127.0.0.1', port = 5000, threaded = True)
+    
+
