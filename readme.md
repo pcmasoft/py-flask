@@ -1,4 +1,4 @@
 # Pending
 
-- [] Prepare apache server
-- [] Another
+- [ ] Prepare apache server
+- [ ] Another
