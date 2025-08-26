@@ -1,5 +1,5 @@
 # About
-## Features:
+## Features: 
 - [ ] 
 
 ## Pending: 
