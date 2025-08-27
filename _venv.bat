@@ -1,5 +1,7 @@
 @echo off
 cls
+cmd /c "title Python Virtual Environment Setup & color 0A"
+echo Checking for existing venv...
 if not exist venv (
     echo Creating venv Activating...
     python -m venv venv 
@@ -43,7 +45,5 @@ if not exist venv (
 )
 
 cmd /k 
-rem cls && ^
-rem echo Virtual environment 'venv' created and activated. Type 'deactivate' to exit. && ^
 
 
