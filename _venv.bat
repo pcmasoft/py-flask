@@ -19,13 +19,19 @@ if not exist venv (
         echo Failed to upgrade pip, setuptools, or wheel. Please check your Python installation.
         exit /b %errorlevel%
     )
-    echo Installing dependencies from requirements.txt...
-    pip install --no-cache-dir -r requirements.txt 
-    if %errorlevel% neq 0 (
-        echo Failed to install dependencies. Please check requirements.txt for issues.
-        exit /b %errorlevel%
+    if exist requirements.txt (
+        echo Found requirements.txt file.
+        echo Installing dependencies from requirements.txt...
+        pip install --no-cache-dir -r requirements.txt 
+        if %errorlevel% neq 0 (
+            echo Failed to install dependencies. Please check requirements.txt for issues.
+            exit /b %errorlevel%
+        )
+        echo All dependencies installed successfully.
+    ) else (
+        echo requirements.txt file not found. Please ensure it exists in the current directory.
     )
-    echo All dependencies installed successfully.
+
 ) else (
     echo Activating existing venv...
     .\venv\Scripts\activate 
