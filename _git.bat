@@ -1,5 +1,5 @@
 @echo off
-::call auto_git
+
 cls
 echo Starting git operations ...
 :: Set the current directory to the script's directory
@@ -16,16 +16,22 @@ if [%1] == [] (
     set var=%1
 )
 git add .
-git commit -m %var%
-git push 
-rem echo Date: %var%
-
 if %errorlevel% neq 0 (
-    echo Git operations failed!
+    echo Git add failed!
+    exit /b %errorlevel%
+)
+
+git commit -m %var%
+if %errorlevel% neq 0 (
+    echo Git commit failed or nothing to commit!
+    rem exit /b %errorlevel%
+)
+git push 
+if %errorlevel% neq 0 (
+    echo Git push failed!
     exit /b %errorlevel%
 )
 
 echo ==========================
 echo Git operations completed!.
 echo ==========================
-::pause

@@ -9,12 +9,9 @@ if %errorlevel% neq 0 (
 )
 echo Checking for existing venv... 
 if not exist venv (
-    
     echo Creating venv Activating...
-
     python -m venv venv 
     if %errorlevel% neq 0 (
-
         echo Failed to create virtual environment. Please ensure Python is installed and accessible.
         exit /b %errorlevel%
     )
@@ -42,20 +39,16 @@ if not exist venv (
     ) else (
         echo requirements.txt file not found. Please ensure it exists in the current directory.
     )
-
 ) else (
-    
     echo Activating existing venv...
-    .\venv\Scripts\activate 
+    cmd /k .\venv\Scripts\activate 
     if %errorlevel% neq 0 (
         echo Failed to activate the existing virtual environment. Please ensure it is not corrupted.
         exit /b %errorlevel%
     )
     echo Virtual environment 'venv' activated.
     
-
 )
 
 
-cmd /k 
 
