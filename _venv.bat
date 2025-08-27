@@ -1,14 +1,55 @@
 @echo off
 cls
+setlocal EnableDelayedExpansion 
+ 
+set fore_black=^[[30m
+set fore_dred=^[[31m
+set fore_dgreen=^[[32m
+set fore_dyellow=^[[33m
+set fore_dblue=^[[34m
+set fore_dmagenta=^[[35m
+set fore_dcyan=^[[36m
+set fore_dwhite=^[[37m
+ 
+set fore_bblack=^[[90m
+set fore_bred=^[[91m
+set fore_bgreen=^[[92m
+set fore_byellow=^[[93m
+set fore_bblue=^[[94m
+set fore_bmagenta=^[[95m
+set fore_bcyan=^[[96m
+set fore_bwhite=^[[97m
+ 
+set back_black=^[[30m
+set back_dred=^[[31m
+set back_dgreen=^[[32m
+set back_dyellow=^[[33m
+set back_dblue=^[[34m
+set back_dmagenta=^[[35m
+set back_dcyan=^[[36m
+set back_dwhite=^[[37m
+ 
+set back_bblack=^[[90m
+set back_bred=^[[91m
+set back_bgreen=^[[92m
+set back_byellow=^[[93m
+set back_bblue=^[[94m
+set back_bmagenta=^[[95m
+set back_bcyan=^[[96m
+set back_bwhite=^[[97m
+
+set reset=^[[0m
 rem cmd /c "title Python Virtual Environment Setup & color "
+
 echo Checking for existing venv...
+
 if not exist venv (
-    color 0A
+    
     echo Creating venv Activating...
-    color 0f
+
     python -m venv venv 
     if %errorlevel% neq 0 (
-        
+
         echo Failed to create virtual environment. Please ensure Python is installed and accessible.
         exit /b %errorlevel%
     )
@@ -38,6 +79,7 @@ if not exist venv (
     )
 
 ) else (
+    
     echo Activating existing venv...
     .\venv\Scripts\activate 
     if %errorlevel% neq 0 (
@@ -45,8 +87,15 @@ if not exist venv (
         exit /b %errorlevel%
     )
     echo Virtual environment 'venv' activated.
+    
+
 )
 
-cmd /k 
+@echo off
 
+Powershell -command "Write-Host 'I'm Printed in RED!' -ForegroundColor Red"
+
+@pause
+
+cmd /k 
 
