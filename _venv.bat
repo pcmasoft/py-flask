@@ -1,11 +1,14 @@
 @echo off
 cls
-cmd /c "title Python Virtual Environment Setup & color 0A"
+rem cmd /c "title Python Virtual Environment Setup & color "
 echo Checking for existing venv...
 if not exist venv (
+    color 0A
     echo Creating venv Activating...
+    color 0f
     python -m venv venv 
     if %errorlevel% neq 0 (
+        
         echo Failed to create virtual environment. Please ensure Python is installed and accessible.
         exit /b %errorlevel%
     )
