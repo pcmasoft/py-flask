@@ -12,3 +12,4 @@ def index():
         "bienvenida": "Mi página de prueba"
     }
     return render_template("index.html", dato=dato)
+
