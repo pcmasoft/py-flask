@@ -4,7 +4,7 @@
 
 {%block content%}
 <div class="container text-center mt-3">
-    <h1>{{user_data['last name']}}</h1>
+    <h1>{{user_data.last name}}</h1>
     <p>Bienvenidos a mi web personal</p>
 </div>
 
@@ -18,9 +18,9 @@
                     {{edu.skill}}
                 </div>
                 <div class="card-body">
-                    <p class="card-text">{{edu["description"]}}</p>
+                    <p class="card-text">{{edu.description}}</p>
                     <ul>
-                        {%for skill in edu["skill detail"]%}
+                        {%for skill in edu.skill_detail%}
                         <li>
                             {{skill}}
                         </li>
@@ -36,11 +36,11 @@
 <br>
 <div class="container mt-3">
     <h2> Projects </h2>
-    {%for project in user_data["projects"]%}
+    {%for proj in user_data.projects%}
     <div class="container">
-        <h5>Project Title: {{project["project"]}}</h5>
-        <p>{{project["description"]}}</p>
-        <a class="btn btn-dark" href="{{project['link']}}" role="button">See Project</a>
+        <h5>Project Title: {{proj.project}}</h5>
+        <p>{{proj.description}}</p>
+        <a class="btn btn-dark" href="{{proj.link}}" role="button">See Project</a>
 
     </div>
     {%endfor%}
