@@ -1,10 +1,14 @@
+import sys
 import flask as fl
 from flask import request, jsonify, render_template, url_for, redirect
+from flask_bootstrap import Bootstrap5
 from data import datos
-import sys
+from config import Config
 
 app = fl.Flask(__name__)
 # @app.route('/', methods=['GET'])
+app.config.from_object(Config)
+bootstrap = Bootstrap5(app)
 
 
 @app.route('/')
