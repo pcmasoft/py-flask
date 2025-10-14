@@ -1,4 +1,5 @@
 datos = {
     "name": "Pablo",
-    "last name": "Medina"
+    "last name": "Medina",
+    "education": ["Python, C++"]
 }
