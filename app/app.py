@@ -24,5 +24,3 @@ if __name__ == "__main__":
                 threaded=True, debug=True)  # debug mode
     else:
         app.run()  # release mode
-        
-        
