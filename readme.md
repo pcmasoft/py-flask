@@ -1,8 +1,7 @@
 # About
 ## Features: 
-- [ ] Basisc page
+- [x] Basisc page
 
 ## Pending: 
-- [ ] Prepare apache server
-- [ ] Another
+- [ ] Apply styles
 
