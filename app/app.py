@@ -20,12 +20,9 @@ def cv():
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        debug = True
-    else:
-        debug = False
-        
-    if debug:
         app.run(host='127.0.0.1', port=5000,
                 threaded=True, debug=True)  # debug mode
     else:
         app.run()  # release mode
+        
+        
