@@ -1,3 +1,3 @@
 @echo off
 cls
-python app/app.py %1
+python app/app.py debug
