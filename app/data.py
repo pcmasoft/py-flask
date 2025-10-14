@@ -3,17 +3,20 @@ datos = {
     "last_name": "Medina",
     "education": [
         {"skill": "Programming",
-         "description": "I know to programm in Python and C++",
-         "skill_detail": ["Python", "C++", "C#"]},
+         "description": "I know to programm in:",
+         "skill_detail": ["Python", "C++", "C#", "sql", "and anymore .."]},
         {"skill": "Game development",
-         "description": "I know development C++ and other frameworks",
+         "description": "Development frameworks using:",
          "skill_detail": ["C#", "C++"]},
         {"skill": "Data Analysis",
-         "description": "I know data analysis with Python",
+         "description": "Data analysis with:",
          "skill_detail": ["Python"]},
         {"skill": "Web development",
-         "description": "With Python and Flask",
-         "skill_detail": ["Python", "Flask"]}
+         "description": "Development with frameworks:",
+         "skill_detail": ["Flask"]},
+        {"skill": "Databases modeler",
+         "description": "I handle the following:",
+         "skill_detail": ["MySql", "Sql Server", "Postgres", "sqlite"]}
     ],
     "projects": [
         {"project": "Wep App",
