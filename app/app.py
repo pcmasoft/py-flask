@@ -7,11 +7,13 @@ app = fl.Flask(__name__)
 
 @app.route('/')
 def index():
+    """
     dato = {
         "titulo": "INDEX",
         "bienvenida": "Mi página de prueba"
     }
-    return render_template("index.html", dato=dato)
+    """
+    return render_template("index.html")
 
 @app.route("/cv")
 def cv():
