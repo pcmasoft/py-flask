@@ -30,11 +30,9 @@ def project():
 def experience():
     return render_template("experience.html", user_data=datos)
 
-
 @app.route("/education")
 def education():
     return render_template("education.html", user_data=datos)
-
 
 @app.errorhandler(404)
 def page_not_found(e):
