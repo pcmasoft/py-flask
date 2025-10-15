@@ -5,21 +5,23 @@
 {%block content%}
 <div class="container text-center mt-3">
     <h1>{{user_data.name}} {{user_data.last_name}} developer</h1>
-    <p>Welcome to my personal website</p>
+    <p>My Projects</p>
 </div>
 
 <!-- Projects -->
 <br>
 <div class="container mt-3">
-    <h2> Projects </h2>
-    {%for proj in user_data.projects%}
-    <div class="container">
-        <h5>Project Title: {{proj.project}}</h5>
-        <p>{{proj.description}}</p>
-        <a class="btn btn-dark" href="{{proj.link}}" role="button">See Project</a>
-
+    <h2>Project</h2>
+    <div class="row">
+        {%for proj in user_data.projects%}
+        <div class="col-4">
+            <div class="container mt-3">
+                <h5>{{proj.project}}</h5>
+                <p>{{proj.description}}</p>
+                <a class="btn btn-dark" href="{{proj.link}}" role="button">See Project</a>
+            </div>
+        </div>
+        {%endfor%}
     </div>
-    {%endfor%}
 </div>
-
 {%endblock%}
