@@ -1,3 +1,3 @@
 @echo off
 cls
-python run.py debug
+python app/app.py debug
