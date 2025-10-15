@@ -21,13 +21,11 @@ def cv():
 
 @app.route('/doc/<nombre_archivo>')
 def descargar_archivo(nombre_archivo):
-    # Especifica el directorio de los archivos y el nombre
     return send_from_directory('doc', nombre_archivo, as_attachment=True)
 
 @app.route("/project")
 def project():
     return render_template("project.html", user_data=datos)
-
 
 @app.route("/experience")
 def experience():
