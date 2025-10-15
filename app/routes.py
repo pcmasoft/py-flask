@@ -10,7 +10,19 @@ def index():
 
 @App.route("/cv")
 def cv():
-    return "hola"
+    return render_template("cv.html", user_data=datos)
+
+@App.route("/project")
+def project():
+    return render_template("project.html", user_data=datos)
+
+@App.route("/experience")
+def experience():
+    return render_template("experience.html", user_data=datos)
+
+@App.route("/education")
+def education():
+    return render_template("education.html", user_data=datos)
 
 @App.errorhandler(404)
 def page_not_found(e):

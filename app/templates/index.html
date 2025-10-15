@@ -7,45 +7,35 @@
     <h1>{{user_data.name}} {{user_data.last_name}} developer</h1>
     <p>Welcome to my personal website</p>
 </div>
-
-<!-- Education and Skills -->
-<div class="container">
-    <h2>Education and Skills</h2>
-    <div class="row">
-        {%for edu in user_data.education%}
-        <div class="col-4">
-            <div class="card mt-3">
-                <div class="card-header">
-                    {{edu.skill}}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">{{edu.description}}</p>
-                    <ul>
-                        {%for skill in edu.skill_detail%}
-                        <li>
-                            {{skill}}
-                        </li>
-                        {%endfor%}
-                    </ul>
-                </div>
-            </div>
-        </div>
-        {%endfor%}
-    </div>
-</div>
-
-<!-- Projects -->
 <br>
-<div class="container mt-3">
-    <h2> Projects </h2>
-    {%for proj in user_data.projects%}
-    <div class="container">
-        <h5>Project Title: {{proj.project}}</h5>
-        <p>{{proj.description}}</p>
-        <a class="btn btn-dark" href="{{proj.link}}" role="button">See Project</a>
+<p>
+    I was developing information systems and other tasks such as managing databases, creating automation tools (python,
+    c++), updating projects (java), and many others.<br>
+    We mostly started projects in Python, then when better performance was required, I migrated to Java, which is the
+    current framework, but the support tools are made in other technologies,
+    Python for managing data volumes and being able to generate reports about the information for each month,
+    C++/C# for the other command line tools used to manage the database, user management, and backups at reasonable
+    times.<br>
+    I presented a new prototype of the information system built in C#, since the operating system we were using was
+    Windows 7/10/11, including Windows Server 2019. This was to take advantage of the .NET integration with these
+    platforms, which also included a complete migration from MySQL to SQL Server 2022, but the project did not move
+    forward due to budget constraints.<br>
+    I am currently developing my own projects, developing a game engine based on sfml and sdl, to improve the most
+    advanced concepts of the c++20/23 standard,
+    it is still in alpha phase but the outlook is encouraging since it is not an easy project,
+    during development I have strengthened my knowledge in script automation and using the best practices and patterns
+    to allow the project to be migrated to other platforms,
+    first Linux and eventually Mac M1+, if possible until reaching the consoles.<br>
+    My development profile is open, I am not limited to the technologies already mentioned, since I did my first
+    development in Python,
+    it has not limited me to learning other technologies such as Java, C# and others, the challenge of C++ is that you
+    have to handle the most solid concepts of software engineering,
+    as the challenges are my day to day, it does not prevent me from advancing in any type of development.<br>
+    Personally, this achievement and satisfaction would be impossible without my family, especially my girlfriend who
+    for more than 10 years supports me in all my projects,
+    mentioning it is similar to a dedication of a book, excuse me but I wanted to mention it.
+</p>
 
-    </div>
-    {%endfor%}
-</div>
+
 
 {%endblock%}
