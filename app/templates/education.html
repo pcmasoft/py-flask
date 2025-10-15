@@ -8,33 +8,13 @@
     <p>Welcome to my personal website</p>
 </div>
 
-<!-- Projects -->
+<!-- My formation -->
 <br>
+<h2>My academic training</h2>
+<p>
+    Since 2018 .. a long long time ago..
+</p>
 
-<!-- Education and Skills -->
-<div class="container">
-    <h2>Education and Skills</h2>
-    <div class="row">
-        {%for edu in user_data.education%}
-        <div class="col-4">
-            <div class="card mt-3">
-                <div class="card-header">
-                    {{edu.skill}}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">{{edu.description}}</p>
-                    <ul>
-                        {%for skill in edu.skill_detail%}
-                        <li>
-                            {{skill}}
-                        </li>
-                        {%endfor%}
-                    </ul>
-                </div>
-            </div>
-        </div>
-        {%endfor%}
-    </div>
-</div>
+
 
 {%endblock%}
