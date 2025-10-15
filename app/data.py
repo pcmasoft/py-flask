@@ -4,10 +4,10 @@ datos = {
     "education": [
         {"skill": "Programming",
          "description": "I know to programm in:",
-         "skill_detail": ["Python", "C++", "C#", "sql", "and anymore .."]},
+         "skill_detail": ["C++", "Python", "C#", "sql", "and anymore .."]},
         {"skill": "Game development",
          "description": "Development frameworks using:",
-         "skill_detail": ["C#", "C++"]},
+         "skill_detail": ["C++", "C#"]},
         {"skill": "Data Analysis",
          "description": "Data analysis with:",
          "skill_detail": ["Python"]},
@@ -16,7 +16,7 @@ datos = {
          "skill_detail": ["Flask"]},
         {"skill": "Databases modeler",
          "description": "I handle the following:",
-         "skill_detail": ["MySql", "Sql Server", "Postgres", "sqlite"]}
+         "skill_detail": ["MySql", "Sql Server", "sqlite"]}
     ],
     "projects": [
         {"project": "Wep App",
