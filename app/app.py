@@ -1,8 +1,8 @@
 import sys
 import app
+from flask import Flask
 from flask import request, jsonify, render_template, url_for, redirect, send_from_directory
 from data import datos
-from flask import Flask
 
 app = Flask(__name__)
 
