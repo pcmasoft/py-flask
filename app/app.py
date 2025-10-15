@@ -14,9 +14,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html", user_data=datos)
 
-@app.route("/cv")
-def cv():
-    return render_template("cv.html", user_data=datos)
+@app.route("/downloads")
+def downloads():
+    return render_template("downloads.html", user_data=datos)
 
 @app.route('/doc/<nombre_archivo>')
 def descargar_archivo(nombre_archivo):
